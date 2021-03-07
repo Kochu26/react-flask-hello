@@ -14,9 +14,9 @@ export const Single = props => {
 			<img src={rigoImageUrl} />
 			<hr className="my-4" />
 
-			<Link to="/">
+			<Link to="/inicio">
 				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
+					Ir a inicio
 				</span>
 			</Link>
 		</div>

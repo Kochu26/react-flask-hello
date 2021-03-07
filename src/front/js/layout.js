@@ -2,8 +2,12 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
+import { Inicio } from "./pages/inicio";
+import { Registro } from "./pages/registro";
+import { Iniciar_Sesion } from "./pages/iniciar_sesion";
+import { MiCuenta } from "./pages/micuenta";
+import { Contactos } from "./pages/contactos";
+import { Nosotros } from "./pages/nosotros";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
@@ -11,7 +15,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 //create your first component
-const Layout = () => {
+export const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
@@ -22,11 +26,23 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/">
-							<Home />
+						<Route exact path="/inicio">
+							<Inicio />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
+						<Route exact path="/registro">
+							<Registro />
+						</Route>
+						<Route exact path="/iniciar_sesion">
+							<Iniciar_Sesion />
+						</Route>
+						<Route exact path="/micuenta">
+							<MiCuenta />
+						</Route>
+						<Route exact path="/contactos">
+							<Contactos />
+						</Route>
+						<Route exact path="/nosotros">
+							<Nosotros />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
