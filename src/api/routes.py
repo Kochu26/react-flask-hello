@@ -8,11 +8,61 @@ from api.utils import generate_sitemap, APIException
 api = Blueprint('api', __name__)
 
 
-@api.route('/hello', methods=['POST', 'GET'])
-def handle_hello():
+@api.route('/inicio', methods=['POST', 'GET'])
+def inicio():
 
     response_body = {
-        "message": "Hola",
+        "message": "hola",
+        "name": "alguien"
+    }
+
+    return jsonify(response_body), 200
+
+@api.route('/registrarse', methods=['POST', 'GET'])
+def registrarse():
+
+    response_body = {
+        "message": "hola",
+        "name": "alguien"
+    }
+
+    return jsonify(response_body), 200
+
+@api.route('/iniciar_sesion', methods=['POST', 'GET'])
+def iniciar_sesion():
+
+    response_body = {
+        "message": "hola",
+        "name": "alguien"
+    }
+
+    return jsonify(response_body), 200
+
+@api.route('/mi_cuenta', methods=['POST', 'GET'])
+def mi_cuenta():
+
+    response_body = {
+        "message": "hola",
+        "name": "alguien"
+    }
+
+    return jsonify(response_body), 200
+
+@api.route('/contactos', methods=['POST', 'GET'])
+def contactos():
+
+    response_body = {
+        "message": "hola",
+        "name": "alguien"
+    }
+
+    return jsonify(response_body), 200
+
+@api.route('/nosotros', methods=['POST', 'GET'])
+def nosotros():
+
+    response_body = {
+        "message": "hola",
         "name": "alguien"
     }
 
